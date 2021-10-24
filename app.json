@@ -1,13 +1,13 @@
 {
-  "name": "Simpel WhatsApp Bot",
-  "description": "[sherlynn-bot] Thank you for using this script, don't forget to subscribe to my channel KurrXd",
+  "name": "Sakura BOT",
+  "description": "[Sakura BOT] Thank you for using this script, don't forget to subscribe to my channel KurrXd",
   "logo": "https://a.uguu.se/GrttsiUy.jpg",
   "keywords": ["termux-whatsapp-bot",
     "whatsapp-bot",
     "whatsapp",
     "js-whatsapp"],
-  "repository": "https://github.com/KurrXd/Sherlynnv2",
-  "buildpacks": [
+  "repositori" : "https://github.com/Assabiq31213/sakurav2",
+  "buildpack" : [
     {
       "url": "heroku/nodejs"
     },
