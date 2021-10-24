@@ -1,0 +1,30 @@
+{
+  "name": "Simpel WhatsApp Bot",
+  "description": "[sherlynn-bot] Thank you for using this script, don't forget to subscribe to my channel KurrXd",
+  "logo": "https://a.uguu.se/GrttsiUy.jpg",
+  "keywords": ["termux-whatsapp-bot",
+    "whatsapp-bot",
+    "whatsapp",
+    "js-whatsapp"],
+  "repository": "https://github.com/KurrXd/Sherlynnv2",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    },
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    },
+    {
+      "url": "https://github.com/DuckyTeam/heroku-buildpack-imagemagick"
+    },
+    {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    }
+  ],
+   "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}

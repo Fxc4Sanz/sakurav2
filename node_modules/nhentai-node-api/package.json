@@ -1,0 +1,44 @@
+{
+  "name": "nhentai-node-api",
+  "author": {
+    "name": "barthofu"
+  },
+  "version": "1.1.2",
+  "deprecated": false,
+  "description": "nHentai wrapper for NodeJs",
+  "license": "MIT",
+  "keywords": [
+    "nhentai",
+    "api",
+    "hentai",
+    "manga",
+    "doujin",
+    "anime",
+    "wrapper",
+    "nodejs",
+    "javascript"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/index.test"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "superagent": "^4.1.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  },
+  "homepage": "https://github.com/barthofu/nhentai-node-api#readme",
+  "bugs": {
+    "url": "https://github.com/barthofu/nhentai-node-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barthofu/nhentai-node-api.git"
+  }
+}
