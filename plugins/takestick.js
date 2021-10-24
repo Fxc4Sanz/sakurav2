@@ -17,8 +17,8 @@ if (!img) throw 'Foto/Video tidak ditemukan'
     else throw 'Conversion failed'
   }
 }
-handler.help = ['takestick', 'colong']
+handler.help = ['takestick']
 handler.tags = ['sticker']
-handler.command = /^takestick|colong$/i
+handler.command = /^takestick$/i
 
 module.exports = handler
