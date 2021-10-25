@@ -13,10 +13,10 @@ let handler = async (m, { conn }) => {
             const timestampi = speed();
             const latensip = speed() - timestampi
 			conn.reply(m.chat, `BOT ONLINE SELAMA\n ${formater1(uptime1)}`, 'conversation', { quoted: m, contextInfo: { externalAdReply :{
-sourceUrl: 'https://wa.me/62895603352610?text=Hai',
+sourceUrl: 'https://wa.me/6285804289247?text=Hai',
 mediaType: 2,
 title: `Runtime : ${formater1(uptime1)}`,
-body: 'Ayane Shirakawa By Johannes',
+body: 'Created By ©BiqqTzy',
 thumbnailUrl: await conn.getProfilePicture(conn.user.jid),
 }}})
         }
