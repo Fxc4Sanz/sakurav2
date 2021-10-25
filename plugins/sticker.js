@@ -3,31 +3,7 @@ const { sticker } = require('../lib/sticker')
 const uploadFile = require('../lib/uploadFile')
 const uploadImage = require('../lib/uploadImage')
 let { webp2png } = require('../lib/webp2mp4')
-let fs = require('fs')
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-const ftoko = {
-key: {
-			fromMe: false,
-			participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})
-		},
-		message: {
-			"productMessage": {
-				"product": {
-					"productImage":{
-						"mimetype": "image/jpeg",
-						"jpegThumbnail": fs.readFileSync('./src/logo.jpg'), //Gambarnye
-					},
-					"title": `Hai ${conn.getName(m.sender)}`, //Kasih namalu 
-					"description": `Rp 9.999.999.999`, 
-					"currencyCode": "Rp",
-					"priceAmount1000": "500000",
-					"retailerId": `ppk`,
-					"productImageCount": 1
-				},
-				    "businessOwnerJid": `628162633549@s.whatsapp.net`
-		}
-	}
-}
   let stiker = false
   try {
     let q = m.quoted ? m.quoted : m
@@ -53,11 +29,13 @@ key: {
       else return m.reply('URL tidak valid!')
     }
   } finally {
-    if (stiker) await conn.sendMessage(m.chat, stiker, MessageType.sticker, { quoted: m})
+    if (stiker) await conn.sendMessage(m.chat, stiker, MessageType.sticker, {
+      quoted: m
+    })
     else throw `Gagal${m.isGroup ? ', balas gambarnya!' : ''}`
   }
 }
-handler.help = ['stiker ', 'stiker <url>']
+handler.help = ['stiker <reply media>/<caption>', 'stiker <url>']
 handler.tags = ['sticker']
 handler.command = /^s(tic?ker)?(gif)?(wm)?$/i
 
