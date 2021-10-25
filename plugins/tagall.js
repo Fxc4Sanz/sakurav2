@@ -38,7 +38,7 @@ handler.group = true
 handler.private = false
 
 handler.admin = true
-handler.botAdmin = true
+handler.botAdmin = false
 
 handler.fail = null
 handler.limit = false

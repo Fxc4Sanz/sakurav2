@@ -75,7 +75,7 @@ ${usedPrefix}disable welcome
 sourceUrl: 'https://www.instagram.com/assbq_k',
 mediaType: 2,
 title: `FOLLOW MY INSTAGRAM`,
-body: '_*Created By ©BiqqTzy*_',
+body: 'Created By ©BiqqTzy',
 thumbnailUrl: 'https://i.ibb.co/ZWzygtN/bbb2ed6426c6.jpg',
 }}})
 }
@@ -83,7 +83,7 @@ handler.help = ['en', 'dis'].map(v => v + 'able <option>')
 handler.tags = ['group', 'owner']
 handler.command = /^((en|dis)able|(tru|fals)e|(turn)?o(n|ff))$/i
 
-handler.owner = false
-handler.admin = true
+handler.owner = true
+handler.admin = false
 
 module.exports = handler
