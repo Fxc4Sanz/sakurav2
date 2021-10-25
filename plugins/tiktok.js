@@ -12,12 +12,11 @@ let handler = async (m, { conn, args }) => {
   let txt = json.info[0].text
   for (let hashtag of json.info[0].hashtags) txt = txt.replace(hashtag, '*$&*')
   await conn.sendFile(m.chat, url, 'tiktok.mp4', `
-▶️ *${json.info[0].playCount} Views*
-💟 *${json.info[0].diggCount} Likes*
-🔁 *${json.info[0].shareCount} Shares*
-💌 *${json.info[0].commentCount} Comments*
-🎵 ${json.info[0].musicMeta.musicName} by ${json.info[0].musicMeta.musicAuthor}
-- *By:* ${json.info[0].authorMeta.nickName} (${json.info[0].authorMeta.name})
+👤 *Username: ${json.info[0].authorMeta.nickName} (${json.info[0].authorMeta.name})*
+▶️ *Views: ${json.info[0].playCount} Views*
+💟 *Likes: ${json.info[0].diggCount} Likes*
+🔁 *Shares: ${json.info[0].shareCount} Shares*
+💌 *Comments: ${json.info[0].commentCount} Comments*
 - *Desc:*
 ${txt}
   `.trim(), m)
